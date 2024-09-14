@@ -1,0 +1,48 @@
+<div [class.AuthContainer]="true">
+    <div #AuthHeader [class.AuthContainerHeader]="true">
+        <img src={{RoyaumeLogo}} alt="image"/>
+    </div>
+    <div [class.AuthContainerInputs]="true">
+        <form #formContainer [class.animate__fadeInRight]="true" [class.AuthContainerInputsForm]="true" (ngSubmit)="onSubmit()" #myForm="ngForm">
+            <div>
+                <input type="text" id="Utilisateur" name="Utilisateur"  placeholder="Utilisateur" [(ngModel)]="Utilisateur" required>
+            </div>
+            
+            <div>
+                <!-- <input type="text" placeholder="Mot de passe"> -->
+                <input type="password" id="Password" name="Password"  placeholder="Mot de passe" [(ngModel)]="Password" required>
+            </div>
+            
+            <div>
+                <button type="submit" [disabled]="myForm.invalid">S'authentifier</button>
+            </div>
+        </form>
+
+        <div #qrContainer [class.animate__fadeInRight]="true" [class.AuthContainerInputsQR]="true">
+            
+            
+            <div [class.AuthContainerInputsQRContain]="true">
+                <img src={{qrCode.qrCode}} />
+            </div>
+            
+            <div [class.AuthContainerInputsQRActions]="true">
+                <div [class.AuthContainerInputsQRBack]="true" (click)="goBack()"><a>Revenir</a></div>
+                <div [class.AuthContainerInputsQRContinue]="true" (click)="goForward()" ><a>Continuer</a></div>
+            </div>
+            
+            
+        </div>
+
+        <form #FormCodeContainer [class.FormCodeContainer]="true">
+            <div>
+                <input type="text" id="Code" name="Code"  placeholder="Code" [(ngModel)]="Code" required>
+            </div>
+            <div>
+                <button type="submit" [disabled]="myForm.invalid" (click)="verifyCode()">Verifier</button>
+                <!-- (ngSubmit)="verifyCode()"  -->
+            </div>
+        </form>
+        
+    </div>
+
+</div>

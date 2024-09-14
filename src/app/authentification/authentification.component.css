@@ -1,0 +1,102 @@
+.AuthContainer{
+    width: 40vw;
+    height: 70vh;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(30px);
+
+}
+.AuthContainerHeader{
+    width: 40vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AuthContainerInputs{
+    width: 40vw;
+    height: 30vh;
+}
+.AuthContainerInputs>form>div{
+    margin: auto;
+    width: 40vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AuthContainerInputs>form>div>input{
+    margin: auto;
+    width: 20vw;
+    height: 5vh;
+    padding-left: 1vw;
+    background-color: white;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 10px;
+}
+.AuthContainerInputs>form>div>button{
+    margin: auto;
+    width: 20vw;
+    height: 5vh;
+    padding-left: 1vw;
+    background-color: white;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 10px;
+}
+.AuthContainerInputsQR{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.AuthContainerInputsQRContain,.AuthContainerInputsQRBack{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 25vh; */
+}
+.AuthContainerInputsQRContain{
+    height: 50vh;
+}
+.AuthContainerInputsQRBack{
+    height: 20vh;
+    cursor: pointer;
+}
+/* .AuthContainerInputsQRActions:hover{
+    height: 20vh;
+    cursor: pointer;
+    background-color: rgb(96, 131, 161);
+    transition: all 0.3s ease;
+} */
+
+.AuthContainerInputsQRActions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.AuthContainerInputsQRActions>div{
+    width: 20vw;
+    text-align: center;
+}
+.AuthContainerInputsQRActions>div>a{
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 1vw;
+    cursor: pointer;
+}
+.AuthContainerInputsQRBack>a{
+    background-color: rgb(116, 116, 116);
+}
+.AuthContainerInputsQRContinue>a{
+    background-color: rgb(4, 194, 45);
+}
+.AuthContainerInputsForm,.AuthContainerInputsQR{
+    animation-duration: 0.3s;
+}
+.FormCodeContainer{
+    display: none;
+}
+.FormCodeContainer{
+    
+}
