@@ -44,21 +44,20 @@ export class AuthentificationComponent {
     this.apiService.postUser(this.Utilisateur)
       .subscribe(
         (response) => {
+          console.table(response)
           this.qrContainer.nativeElement.style.display = "block";
           this.formContainer.nativeElement.style.display = "none";
           this.AuthHeader.nativeElement.style.display = "none";
           this.qrCode = response;
-          // console.table(response);
-          // alert(response)
         },
         (error) => {
+          alert(error.error)
           console.log('Error:', error);
         }
       );
   }
 
   verifyCode() {
-    // alert("hello")
     this.apiService.verifyCode(this.Code, this.Utilisateur)
       .subscribe(
         (response) => {
@@ -66,6 +65,7 @@ export class AuthentificationComponent {
           
         },
         (error) => {
+          alert(error.error.message)
           console.log('Verification error:', error);
         }
       );

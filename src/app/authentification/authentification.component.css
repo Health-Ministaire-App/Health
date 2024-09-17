@@ -13,6 +13,9 @@
     align-items: center;
     justify-content: center;
 }
+.AuthContainerHeader>img{
+    border-radius: 100px;
+}
 .AuthContainerInputs{
     width: 40vw;
     height: 30vh;

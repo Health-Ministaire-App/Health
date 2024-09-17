@@ -1,9 +1,12 @@
 <div [class.AuthContainer]="true">
+    
     <div #AuthHeader [class.AuthContainerHeader]="true">
         <img src={{RoyaumeLogo}} alt="image"/>
     </div>
+    
     <div [class.AuthContainerInputs]="true">
         <form #formContainer [class.animate__fadeInRight]="true" [class.AuthContainerInputsForm]="true" (ngSubmit)="onSubmit()" #myForm="ngForm">
+            
             <div>
                 <input type="text" id="Utilisateur" name="Utilisateur"  placeholder="Utilisateur" [(ngModel)]="Utilisateur" required>
             </div>
@@ -12,7 +15,6 @@
                 <!-- <input type="text" placeholder="Mot de passe"> -->
                 <input type="password" id="Password" name="Password"  placeholder="Mot de passe" [(ngModel)]="Password" required>
             </div>
-            
             <div>
                 <button type="submit" [disabled]="myForm.invalid">S'authentifier</button>
             </div>
@@ -44,5 +46,6 @@
         </form>
         
     </div>
+    
 
 </div>
